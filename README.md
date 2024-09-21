@@ -24,3 +24,29 @@ Directory Breakdown
 api-gateway/: Contains the API Gateway code, handling client requests and routing them to the ToDo Service.
 todo-service/: Contains the ToDo Service code, which interacts with Redis to manage tasks.
 docker-compose.yml: Defines the Docker services for the API Gateway, ToDo Service, and Redis.
+
+API Gateway
+api-gateway/.env
+This file contains environment variables for the API Gateway:
+
+PORT: The port on which the API Gateway runs.
+TODO_SERVICE_URL: The URL of the ToDo Service.
+
+api-gateway/package.json
+This file defines the Node.js project configuration for the API Gateway
+
+api-gateway/index.js
+This is the main entry point of the API Gateway
+
+express: Sets up the Express server.
+dotenv: Loads environment variables from the .env file.
+routes: Imports routes from routes.js.
+
+api-gateway/routes.js
+This file defines the routes for the API Gateway, using Axios to communicate with the ToDo Service
+
+GET /tasks: Fetches all tasks from the ToDo Service.
+GET /tasks/:id: Fetches a specific task by ID from the ToDo Service.
+POST /tasks: Adds a new task via the ToDo Service.
+DELETE /tasks/:id: Deletes a task by ID via the ToDo Service.
+
