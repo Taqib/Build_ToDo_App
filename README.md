@@ -50,3 +50,9 @@ GET /tasks/:id: Fetches a specific task by ID from the ToDo Service.
 POST /tasks: Adds a new task via the ToDo Service.
 DELETE /tasks/:id: Deletes a task by ID via the ToDo Service.
 
+todo-service/.env
+This file contains environment variables for the ToDo Service
+
+PORT: The port on which the ToDo Service runs.
+REDIS_URL: The URL of the Redis database.
+
